@@ -20,9 +20,9 @@ const MeetingListType = () => {
     description:"",
     link:''
   });
-  const[callDetails,setCallDetails]=useState<Call>()
+  const[callDetail,setCallDetails]=useState<Call>();
 
-  const CreateMeeting=()=>{
+  const CreateMeeting=async()=>{
     if(!client || !user) return;
 
     try {
@@ -42,7 +42,7 @@ const MeetingListType = () => {
       })
       setCallDetails(call);
       if(!values.description){
-        router.push(`/meetings/${call}`)
+        router.push(`/meeting/${call.id}`)
       }
       
     } catch (error) {
