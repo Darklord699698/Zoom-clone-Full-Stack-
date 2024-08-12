@@ -1,4 +1,5 @@
-import React from 'react'
+import MeetingListType from '@/components/MeetingListType';
+
 
 const Home = () => {
   const now=new Date();
@@ -17,6 +18,7 @@ const Home = () => {
         </div>
       </div>
      </div>
+     <MeetingListType/>
     </section>
   )
 }
